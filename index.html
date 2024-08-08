@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Exhibit Catalog</title> 
+	<style> 
+		/* Add CSS styles for flex container and items */
+        
+        
+		.exhibit-list { 
+			display: flex; 
+			flex-wrap: wrap; /* Allow items to wrap to the next row if necessary */
+			justify-content: space-between; /* Space items evenly along the main axis */
+			list-style: none; /* Remove list styles */
+			padding: 0; 
+		} 
+
+		.exhibit-item { 
+			flex: 1; /* Grow to fill available space evenly */
+			max-width: 30%; /* Limit item width to avoid overcrowding */
+			margin: 10px; /* Add spacing between items */
+			border: 1px solid #ccc; /* Add a border for visual separation */ 
+			padding: 10px; 
+			text-align: center; 
+            background-color: rgb(215, 208, 208);
+	
+		} 
+
+	</style> 
+</head> 
+<body style= "background-color: rgb(134, 132, 132);">
+     
+	<h1 style="text-align: center;">Exhibit Catalog</h1>
+	<h2 style="text-align: center; color: black;">Welcome to Le Grande virtual art museum</h2> 
+	
+	<ul style="background-color: rgb(100, 118, 118);" class="exhibit-list"> 
+		{% for exhibit in exhibits %} 
+			<li class="exhibit-item"> 
+				<a href="#"> 
+					<img src="{{ exhibit.image.url }}" alt="{{ exhibit.name }}" width="200"> 
+				</a> 
+				<h2>{{ exhibit.name }}</h2> 
+				<p>{{ exhibit.description }}</p> 
+			</li>
+		{% endfor %} 
+	</ul>
+	<div class = "footer">
+		<div class = "col-1">
+			<form>
+				<input type = "text" placeholder = "Your email here">
+				<button type = "submit">Subscribe</button>
+			</form>
+		</div>
+	</div>
+</body> 
+</html> 
