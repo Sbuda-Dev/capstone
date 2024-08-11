@@ -1,0 +1,2 @@
+docker build --tag mycap .
+docker run --pubish 8000:8000 mycap
