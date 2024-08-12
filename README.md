@@ -22,5 +22,8 @@ After the virtual environment has been activated, install Django via your IDE.
 Once Django has been installed, use the command "python manage.py startapp [your app name]"
 to create a Django project.
 
+Once the project is running, you'll be able to set up the html for the exhibit webpage.
+If you get stuck, you can refer to the "Pictures" folder.
+
 
 
